@@ -1,0 +1,44 @@
+# get input for variables
+get_Input for from_Location
+get_Input for to_Location
+get_Input for depart_Time_Out
+get_Input for depart_Time_Return
+get input for start_Date
+get input for end_Date
+get_Input for bringingBike
+
+# prepare the android emulator to run the script on
+open android_Emulator
+center window (maximize)
+identify and set screen area
+
+# buy the tickets
+open DSB_App
+press Start
+input from_Location
+input to_Location
+select time and input depart_Time_Out and date # format: 11232025 (Month, date and year)
+press search
+click 'add return'
+input depart_Time_Return
+find trip with RE train and select
+select 'Orange'
+select 'Go to seat reservation'
+if bringingBike is True:
+    click + on bike
+    click Go to confirm
+else:
+click 'Search return'
+select return train corrosponding to derpart_Time_Return
+select 'Orange'
+click 'Go to seat reservation'
+if bringingBike is True:
+    click + on bike
+    click 'Go to confirm'
+else:
+click 'Go to Confirm'
+click 'Accept terms and conditions' button
+click 'Go to payment'
+Slide Pay-slider to pay
+click 5 stars
+click Exit button
